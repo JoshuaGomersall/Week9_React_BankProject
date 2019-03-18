@@ -4,16 +4,6 @@ import './App.css';
 import {Route,BrowserRouter,Link,Switch} from 'react-router-dom';
 
 class App extends Component {
-  
-  constructor(props) {
-      super(props);
-      this.state = {
-            Forename : 'Charlie',
-            Surname : 'Chaplin',
-      }
-  }
-  
-  
   render() {
     return (
       <div className="App">
@@ -26,23 +16,13 @@ class App extends Component {
       <br></br>
       <br></br>
       <br></br>
+
+
       <br></br>
       <br></br>
+		  <p>Password</p>
       
-
-		  <p>Welcome {this.state.Forename + ' ' + this.state.Surname} Your account has just been created
-      </p>
-
-		  <div>
-      <p>Account Code</p>
-		  <input id="password"></input>
-      </div>
-
-      <br></br>
-      <button><a href="localhost:3000/loggedin"> Confirm </a></button>
-
-
-
+		  
         </header>
       </div>
     );

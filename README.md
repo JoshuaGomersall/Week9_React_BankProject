@@ -4,19 +4,6 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 In the project directory, you can run:
 
-# `WebPages`
-Login/Sign Up 
-
-Generate Random Account Number
-
-Prize Draw Win
-
-Prize Draw Lose
-
-
-
-
-
 ### `npm start`
 
 Runs the app in the development mode.<br>
