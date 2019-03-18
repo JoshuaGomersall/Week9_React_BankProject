@@ -1,39 +1,35 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
 import {Route,BrowserRouter,Link,Switch} from 'react-router-dom';
 import axios from 'axios';
 
-class App extends Component {
+class PrizeDraw extends Component {
 
   constructor(props) {
     super(props);
     this.state = {
-          data : '',
           reward : '500',
     }
 }
 
 componentDidMount()
 {
-  let win = true;
+  let reward = this.state.reward;
   console.log('Result Start');
-  if (win == true)
+  if (reward > 0)
   {
       document.getElementById('rewardtext').innerHTML =  'You Win! £ ' + this.state.reward;
     }
-    if (win == false)
+    if (reward <= 0)
   {
       document.getElementById('rewardtext').innerHTML =  'You Lose Sorry';
     }
 }
 
 deleteRequest = () => {
-  console.log ("START DELETE");
   alert("Deleting Character");
   axios.delete('http://35.189.101.154:8888/individual_Project/api/Player/deletePlayer/' + this.state.CharacterName).then(response => {
     console.log(response.data);
-    console.log("Done");
      alert("Character Deleted");
     });
   };
@@ -43,16 +39,6 @@ deleteRequest = () => {
     return (
       <div className="App">
         <header className="App-header">
-		  
-      <h1>
-        ROYAL BANK OF QA
-        </h1>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
-      <br></br>
 
 		  <p id='rewardtext'>
       </p>
@@ -67,4 +53,4 @@ deleteRequest = () => {
   }
 }
 
-export default App;
+export default PrizeDraw;
