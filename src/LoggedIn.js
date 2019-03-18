@@ -39,9 +39,8 @@ class App extends Component {
       </div>
 
       <br></br>
-      <button><a href="localhost:3000/loggedin"> Confirm </a></button>
 
-
+      <button><Link to="/PrizeDraw"> Confirm </Link></button>
 
         </header>
       </div>
