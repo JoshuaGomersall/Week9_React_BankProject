@@ -1,0 +1,62 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 40vmin;
+  pointer-events: none;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@font-face {
+   font-family: adventure;
+}
+
+h1 {
+  font-family: adventure;
+  font-weight: lighter;
+  font-style: italic;
+  color: turquoise;
+  outline-offset: 10px;
+  outline: 100px;
+  outline-offset: 100px;
+  outline-color: yellow;
+  text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000;
+}
+
+p {
+  font-family: adventure;
+  font-weight: normal;
+  font-style: italic;
+  color: #cfd4fb;
+  text-shadow: -2px -2px 0 #000, 2px -2px 0 #000, -2px 2px 0 #000, 2px 2px 0 #000;
+}
+
+button {
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
