@@ -9,9 +9,12 @@ function RoutingExample() {
 
   return (
     <Router>
-      <div className="grid-container">
-          <div className="item1">
-          </div>
+      
+      <h1>
+        ROYAL BANK OF QA</h1>
+      <div>
+
+      
 
         <Route exact path="/Login" component={Login} />
         <Route exact path="/Loggedin" component={Loggedin} />
