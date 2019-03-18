@@ -58,9 +58,9 @@ deleteRequest = () => {
       </p>
       <br></br>
 
-      <button><a href="localhost:3000/loggedin"> Log Out </a> </button> 
+      <button><Link to='/Login'> Log Out </Link></button> 
       <br></br>
-      <button onClick={this.deleteRequest}> Delete Account </button>
+      <button onClick={this.deleteRequest}> <Link to='/Login'> Delete Account </Link></button>
         </header>
       </div>
     );

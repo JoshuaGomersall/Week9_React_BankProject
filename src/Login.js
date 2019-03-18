@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
-import {Route,BrowserRouter,Link,Switch} from 'react-router-dom';
+import {Route,BrowserRouter, Link,Switch} from 'react-router-dom';
 import axios from 'axios';
 
 class App extends Component {
@@ -12,7 +12,7 @@ class App extends Component {
 		  
       <h1>
         ROYAL BANK OF QA
-        </h1>
+      </h1>
       <br></br>
       <br></br>
       <br></br>
@@ -20,12 +20,11 @@ class App extends Component {
       
       <div>
 		  <p>Forename</p>
-		  <input id="username" ></input>
+		  <input id="forename" ></input>
 
       <p>Surname</p>
-		  <input id="username" ></input>
+		  <input id="surname" ></input>
       </div>
-
 
       <br></br>
       <br></br>
@@ -34,8 +33,8 @@ class App extends Component {
 
 		  <br></br>
 		  <div>
-		  <button><a href="localhost:3000/loggedin"> Submit </a> </button> 
-      <button><a href="localhost:3000/loggedin"> Login </a></button>
+		  <button> <Link to='/Loggedin'>Create</Link></button> 
+      <button> <Link to='/Loggedin'> Login </Link></button>
 		  </div>
 		  
         </header>
