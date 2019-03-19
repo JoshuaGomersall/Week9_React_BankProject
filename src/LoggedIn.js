@@ -7,9 +7,7 @@ class Loggedin extends Component {
   constructor(props) {
     super(props);
     this.state = {
-          Forename : 'Charlie',
-          Surname : 'Chaplin',
-          AccountNumber : 'A0121634',
+          accountNumber : 'A0121634',
     }
   }
 
@@ -18,12 +16,12 @@ class Loggedin extends Component {
       <div className="App">
         <header className="App-header">
 
-		  <p>Welcome {this.state.Forename + ' ' + this.state.Surname} Your account has just been created
+		  <p>Welcome {this.props.forename + ' ' + this.props.surname} Your account has just been created
       </p>
 
 		  <div>
       <p>Account Code</p>
-		  <input readOnly id="AccountNumber" type="text" placeholder={this.state.AccountNumber}></input>
+		  <input readOnly id="AccountNumber" type="text" placeholder={this.state.accountNumber}></input>
       </div>
 
       <br></br>
