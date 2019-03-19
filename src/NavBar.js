@@ -14,10 +14,12 @@ function RoutingExample() {
         ROYAL BANK OF QA</h1>
       <div>
 
-      
-
+        <Route exact path="/" component={Login} />
         <Route exact path="/Login" component={Login} />
-        <Route exact path="/Loggedin" component={Loggedin} />
+        <Route exact path="/Loggedin"  component={Loggedin} /> 
+
+        {/* render={()=><Loggedin forename={this.state.forename} surname={this.state.surname} />}/> */}
+
         <Route exact path="/PrizeDraw" component={PrizeDraw} />
 
       </div>
