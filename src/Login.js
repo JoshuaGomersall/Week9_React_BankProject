@@ -9,8 +9,8 @@ class Login extends Component {
   constructor(props) {
     super(props);
     this.state = {
-          Forename : 'Charlie',
-          Surname : 'Chaplin',
+          forename : 'Charlie',
+          surname : 'Chaplin',
     }
 
 
@@ -26,10 +26,6 @@ class Login extends Component {
       }
     }
   }
-
-
-
-
 
   // this.setforename = (e) =>{
   //   this.Forename = 'Test'
@@ -64,7 +60,7 @@ class Login extends Component {
 		  <br></br>
 		  <div>
       
-      <button> <Link to='/Loggedin'>Create</Link></button> 
+      <button> <Link to='/Loggedin' forename={this.state.forename} surname={this.state.surname}>Create</Link></button> 
       <button> <Link to='/Loggedin'> Login </Link></button>
 		  </div>
 		  

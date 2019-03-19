@@ -17,11 +17,11 @@ componentDidMount()
   let reward = this.state.reward;
   console.log('Result Start');
   if (reward > 0)
-  {
+    {
       document.getElementById('rewardtext').innerHTML =  'You Win! £ ' + this.state.reward;
     }
     if (reward <= 0)
-  {
+    {
       document.getElementById('rewardtext').innerHTML =  'You Lose Sorry';
     }
 }
