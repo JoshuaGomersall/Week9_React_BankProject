@@ -35,9 +35,6 @@ class Login extends Component {
   //   this.Surname = 'Test'
   // }
 
-
-  
-  
   
   render() {
     return (
@@ -60,10 +57,10 @@ class Login extends Component {
 		  <br></br>
 		  <div>
       
-      <button> <Link to='/Loggedin' forename={this.state.forename} surname={this.state.surname}>Create</Link></button> 
-      <button> <Link to='/Loggedin'> Login </Link></button>
+      <button><Link to='/Loggedin' test={this.state.forename} forename={this.state.forename} surname={this.state.surname}>Create</Link></button> 
+      <button><Link to='/Loggedin'> Login </Link></button>
 		  </div>
-		  
+
         </header>
       </div>
     );
