@@ -9,6 +9,7 @@ class Loggedin extends Component {
     this.state = {
           Forename : 'Charlie',
           Surname : 'Chaplin',
+          AccountNumber : 'A0121634',
     }
   }
 
@@ -22,7 +23,7 @@ class Loggedin extends Component {
 
 		  <div>
       <p>Account Code</p>
-		  <input id="password"></input>
+		  <input readOnly id="AccountNumber" type="text" placeholder={this.state.AccountNumber}></input>
       </div>
 
       <br></br>
