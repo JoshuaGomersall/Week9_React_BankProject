@@ -19,11 +19,11 @@ class Login extends Component {
 
     this.changeToLoggedinPage = (e) => {
       if (validator.isAlpha(this.state.forename) == false) {
-        alert('Invalid Forename');
+        document.getElementById('errormessage').innerHTML="Invalid Forename";
         return '0';
       }
-      else if (validator.isAlpha(this.state.surname) == false) {
-        alert('Invalid Surname');
+      if (validator.isAlpha(this.state.surname) == false) {
+        document.getElementById('errormessage').innerHTML="Invalid Surname";
         return '0';
       }
       this.setState({
@@ -47,11 +47,11 @@ class Login extends Component {
     }
   }
 
-  
+
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
+      <header className="App-header">
+        <div className="container">
           <div className={'loginpage' + this.state.login}>
             <div>
               <p>Forename</p>
@@ -63,6 +63,8 @@ class Login extends Component {
 
             <br></br>
 
+              <p id='errormessage'></p>
+
             <br></br>
             <button onClick={this.changeToLoggedinPage}> Create</button>
           </div>
@@ -70,9 +72,8 @@ class Login extends Component {
           <div className={'loggedinpage' + this.state.loggedin}>
             <Loggedin forename={this.state.forename} surname={this.state.surname} accountNumber={this.state.accountNumber} />
           </div>
-
-        </header>
-      </div>
+        </div>
+      </header>
     );
   }
 }

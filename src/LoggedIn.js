@@ -42,10 +42,9 @@ class Loggedin extends Component {
 
 render() {
   return (
-    <div className="App">
-
+    <div>
         <div className={'loggedinpage' + this.state.loggedin}>
-          <p>Welcome {this.props.forename + ' ' + this.props.surname} Your Account has just been succesfully created
+          <p>Welcome {this.props.forename + ' ' + this.props.surname} your Account has just been succesfully created
       </p>
           <div>
             <p>Account Code</p>
@@ -61,8 +60,7 @@ render() {
         <div className={'prizedrawpage' + this.state.prizedraw}>
           <Prizedraw reward={this.state.reward} />
         </div>
-
-    </div>
+      </div>
   );
 }
 }

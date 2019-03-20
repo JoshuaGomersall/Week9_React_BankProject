@@ -28,16 +28,13 @@ class PrizeDraw extends Component {
 
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-
+        <div>
           <p id='rewardtext'>
           </p>
           <br></br>
 
           <button onClick={this.changeToLogin}> Log Out</button>
           <br></br>
-        </header>
       </div>
     );
   }
