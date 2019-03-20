@@ -11,11 +11,9 @@ class PrizeDraw extends Component {
     }
 
     this.changeToLogin = (e) => {
-      this.context.router.goBack();
+      window.history.go(0);
     }
   }
-
-
 
   componentDidMount() {
     let reward = this.props.reward;

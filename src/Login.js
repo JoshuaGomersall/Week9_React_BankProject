@@ -3,42 +3,27 @@ import './App.css';
 import { Route, BrowserRouter, Link, Switch } from 'react-router-dom';
 import axios from 'axios';
 import Loggedin from './LoggedIn';
+import validator from 'validator';
+import isAlpha from 'validator';
 
 class Login extends Component {
 
   constructor(props) {
     super(props);
     this.state = {
-      forename: 'Charlie',
-      surname: 'Chaplin',
-      accountNumber: 'A423TEST',
+      forename: '',
+      surname: '',
       login: 1,
       loggedin: 0,
     }
 
-
-    this.validation = (e) => {
-      if (document.getElementById('forename').Text == 'p') {
-        console.log("Blank")
-        console.log(document.getElementById('forename').textContent)
-        return;
-      }
-      else {
-        console.log(document.getElementById('forename').textContent)
-      }
-    }
-
-
     this.changeToLoggedinPage = (e) => {
-      console.log(document.getElementById('forename').value);
-      if (document.getElementById('forename').value == '') {
-        console.log(document.getElementById('forename').value);
-        alert('Forename Missing');
+      if (validator.isAlpha(this.state.forename) == false) {
+        alert('Invalid Forename');
         return '0';
       }
-      else if (document.getElementById('surname').value == '') {
-        console.log(document.getElementById('forename').value);
-        alert('Surname Missing');
+      else if (validator.isAlpha(this.state.surname) == false) {
+        alert('Invalid Surname');
         return '0';
       }
       this.setState({
@@ -46,8 +31,6 @@ class Login extends Component {
         loggedin: 1
       });
     }
-
-
 
 
 
@@ -64,6 +47,7 @@ class Login extends Component {
     }
   }
 
+  
   render() {
     return (
       <div className="App">
@@ -71,17 +55,16 @@ class Login extends Component {
           <div className={'loginpage' + this.state.login}>
             <div>
               <p>Forename</p>
-              <input placeholder='John' id="forename" onChange={this.setforename}></input>
+              <input placeholder='John' id="forename" onChange={this.setforename} type="text" pattern="[^@]+@[^@]+\.[a-zA-Z]{2,6}" ></input>
 
               <p>Surname</p>
-              <input placeholder='Simons' id="surname" onChange={this.setsurname}></input>
+              <input placeholder='Simons' id="surname" onChange={this.setsurname} type="text" pattern="[^@]+@[^@]+\.[a-zA-Z]{2,6}"></input>
             </div>
 
             <br></br>
-            <br></br>
 
             <br></br>
-            <button onClick={this.changeToLoggedinPage} > Create</button>
+            <button onClick={this.changeToLoggedinPage}> Create</button>
           </div>
 
           <div className={'loggedinpage' + this.state.loggedin}>
