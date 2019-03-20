@@ -11,6 +11,18 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;  
+  display: none;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;  
 }
 
 .App-link {
@@ -62,5 +74,31 @@ input {
   to {
     transform: rotate(360deg);
   }
+}
+
+
+.loginpage0{
+    display: none;
+}
+.loginpage1{
+    
+}
+
+
+
+.loggedinpage0{
+  display: none;
+}
+.loggedinpage1{
+  
+}
+
+
+
+.prizedrawpage0{
+  display: none;
+}
+.prizedrawpage1{
+  
 }
 
