@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
 import './App.css';
-import { Route, BrowserRouter, Link, Switch } from 'react-router-dom';
+import { BrowserRouter, Link, } from 'react-router-dom';
 import axios from 'axios';
 import Loggedin from './LoggedIn';
 import validator from 'validator';
 import isAlpha from 'validator';
+import Button from 'react-bootstrap/Button';
 
 class Login extends Component {
 
@@ -19,20 +20,31 @@ class Login extends Component {
 
     this.changeToLoggedinPage = (e) => {
       if (validator.isAlpha(this.state.forename) == false) {
-        document.getElementById('errormessage').innerHTML="Invalid Forename";
+        document.getElementById('errormessage').innerHTML = "Invalid Forename";
         return '0';
       }
       if (validator.isAlpha(this.state.surname) == false) {
-        document.getElementById('errormessage').innerHTML="Invalid Surname";
+        document.getElementById('errormessage').innerHTML = "Invalid Surname";
         return '0';
       }
+	  
+	  axios.post(`http://35.204.181.223:8081/template/createAccount`, 
+	  {"forename": this.state.forename,
+	  "surname": this.state.surname})
+      .then(response => {
+        console.log(response.data);
+        });
+      this.setState({
+        loggedin: 0,
+        prizedraw: 1,
+      });
+	  
+	  
       this.setState({
         login: 0,
         loggedin: 1
       });
     }
-
-
 
     this.setforename = (e) => {
       this.setState({
@@ -63,7 +75,7 @@ class Login extends Component {
 
             <br></br>
 
-              <p id='errormessage'></p>
+            <p id='errormessage'></p>
 
             <br></br>
             <button onClick={this.changeToLoggedinPage}> Create</button>

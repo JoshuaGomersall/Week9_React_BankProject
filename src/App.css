@@ -5,6 +5,7 @@
 
 
 .App-header {
+  margin-top: -9px;
   background-color: sandybrown;
   min-height: 100vh;
   display: flex;

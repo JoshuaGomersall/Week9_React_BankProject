@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
 import './App.css';
-import { Route, BrowserRouter, Link, Switch } from 'react-router-dom';
-import axios from 'axios';
 
 class PrizeDraw extends Component {
 
@@ -21,8 +19,8 @@ class PrizeDraw extends Component {
     if (reward > 0) {
       document.getElementById('rewardtext').innerHTML = 'You Have Won!  £ ' + this.props.reward;
     }
-    if (reward <= 0) {
-      document.getElementById('rewardtext').innerHTML = 'Unfortunatley on this occasion you have not won a prize';
+    else {
+      document.getElementById('rewardtext').innerHTML = 'Unfortunately on this occasion you have not won a prize';
     }
   }
 
