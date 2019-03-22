@@ -29,23 +29,16 @@ class Login extends Component {
         return '0';
       }
 	  
-	  this.get = (e) => {
       axios.get('http://35.204.181.223:8081/template/generateNumber').then(response => {
         console.log(response.data);
         this.setState({
       accountNumber : e.response.data,
       });
       });
-    }
+    
       this.setState({
         loggedin: 0,
         prizedraw: 1,
-      });
-	  
-	  
-      this.setState({
-        login: 0,
-        loggedin: 1
       });
     }
 

@@ -49,7 +49,7 @@ class Loggedin extends Component {
           <div>
             <p>Account Code</p>
 
-            <label for="accountNumber">{this.state.accountNumber}</label>
+            <label for="accountNumber">{this.props.accountNumber}</label>
           </div>
 
           <br></br>
