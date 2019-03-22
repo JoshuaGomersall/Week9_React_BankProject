@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import { Route, BrowserRouter, Link, Switch } from 'react-router-dom';
+import {BrowserRouter, Link, Switch } from 'react-router-dom';
 import Prizedraw from './PrizeDraw';
 import axios from 'axios';
 
@@ -17,7 +17,7 @@ class Loggedin extends Component {
 
 
     this.changeToPrizeDrawPage = (e) => {
-      axios.post(`http://localhost:8081/template/prizes`, {
+      axios.post(`http://35.204.181.223:8081/template/prizes`, {
          "playerName": this.state.accountNumber})
       .then(response => {
         console.log(response.data);
@@ -31,7 +31,7 @@ class Loggedin extends Component {
 
   componentDidMount() {
     this.get = (e) => {
-      axios.get('http://localhost:8081/template/generateNumber').then(response => {
+      axios.get('http://35.204.181.223:8081/template/generateNumber').then(response => {
         console.log(response.data);
         this.setState({
       accountNumber : e.response.data,
@@ -42,10 +42,9 @@ class Loggedin extends Component {
 
 render() {
   return (
-    <div className="App">
-
+    <div>
         <div className={'loggedinpage' + this.state.loggedin}>
-          <p>Welcome {this.props.forename + ' ' + this.props.surname} Your Account has just been succesfully created
+          <p>Welcome {this.props.forename + ' ' + this.props.surname} your Account has just been succesfully created
       </p>
           <div>
             <p>Account Code</p>
@@ -61,8 +60,7 @@ render() {
         <div className={'prizedrawpage' + this.state.prizedraw}>
           <Prizedraw reward={this.state.reward} />
         </div>
-
-    </div>
+      </div>
   );
 }
 }

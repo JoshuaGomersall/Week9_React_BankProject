@@ -2,20 +2,11 @@
   text-align: center;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;  
-  display: none;
-}
+
 
 .App-header {
-  background-color: #282c34;
+  margin-top: -9px;
+  background-color: sandybrown;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -35,11 +26,11 @@
 
 h1 {
   font-family: advnture;
-  padding: 5px;
+  padding: 25px;
   margin: 0px;
   background-color: #282c34;
   font-family: advnture;
-  font-size: calc(30px + 2vmin);
+  font-size: calc(46px + 2vmin);
   text-align: center;
   font-weight: lighter;
   font-style: italic;
@@ -67,21 +58,12 @@ input {
   text-align: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
 
 .loginpage0{
     display: none;
 }
 .loginpage1{
-    
+      text-align: center;
 }
 
 
@@ -90,7 +72,7 @@ input {
   display: none;
 }
 .loggedinpage1{
-  
+    text-align: center;
 }
 
 
@@ -99,6 +81,20 @@ input {
   display: none;
 }
 .prizedrawpage1{
-  
+    text-align: center;
+}
+
+
+
+.container{
+  position: relative;
+  width: 65%;
+  max-width: 55vw;
+  background: #282c34;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 55vh;
 }
 
