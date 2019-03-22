@@ -14,6 +14,7 @@ class Login extends Component {
     this.state = {
       forename: '',
       surname: '',
+      accountNumber : '',
       login: 1,
       loggedin: 0,
     }
@@ -28,12 +29,14 @@ class Login extends Component {
         return '0';
       }
 	  
-	  axios.post(`http://35.204.181.223:8081/template/createAccount`, 
-	  {"forename": this.state.forename,
-	  "surname": this.state.surname})
-      .then(response => {
+	  this.get = (e) => {
+      axios.get('http://35.204.181.223:8081/template/generateNumber').then(response => {
         console.log(response.data);
-        });
+        this.setState({
+      accountNumber : e.response.data,
+      });
+      });
+    }
       this.setState({
         loggedin: 0,
         prizedraw: 1,
